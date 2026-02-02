@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BigFruits: Fruits
+public class BigFruits: Fruits  //INHERITANCE
 {
     private void Start()
     {
@@ -12,13 +12,13 @@ public class BigFruits: Fruits
 
 
 
-    public override void OnCaught()
+    public override void OnCaught() //POLYMORPHISM
     {
         onCatch?.Invoke(points);
         Destroy(gameObject);
     }
 
-    public override void DestroyFruit()
+    public override void DestroyFruit()  //POLYMORPHISM
     {
         onOutOfBounds.Invoke(damage);
         Destroy(gameObject);

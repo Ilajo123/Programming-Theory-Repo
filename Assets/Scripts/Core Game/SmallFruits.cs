@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class SmallFruits : Fruits
+
+public class SmallFruits : Fruits  //INHERITANCE
 {
    
-    private void Start()
+    private void Start() 
     {
         rb = GetComponent<Rigidbody>();
         damage = 1f;
@@ -13,13 +14,13 @@ public class SmallFruits : Fruits
 
    
 
-    public override void OnCaught()
+    public override void OnCaught() //POLYMORPHISM
     {
         onCatch?.Invoke(points);
         Destroy(gameObject);
     }
 
-    public override void DestroyFruit()
+    public override void DestroyFruit()  //POLYMORPHISM
     {
         onOutOfBounds.Invoke(damage);
         Destroy(gameObject);

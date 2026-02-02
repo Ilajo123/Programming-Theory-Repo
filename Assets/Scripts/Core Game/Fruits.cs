@@ -10,9 +10,10 @@ public abstract class Fruits : MonoBehaviour
     protected Rigidbody rb;
     private float m_Damage;
     protected float points;
-    public float damage
+
+    public float damage 
     {
-        get { return m_Damage; }
+        get { return m_Damage; }  //ENCAPSULATION
         set
         {
             if (value < 0)
@@ -42,7 +43,7 @@ public abstract class Fruits : MonoBehaviour
             OnCaught();
         }
     }
-    public abstract void DestroyFruit();
+    public abstract void DestroyFruit();  //ABSTRACTION
     public void Fall()
     {
         rb.linearVelocity = Vector3.down * fallSpeed;
