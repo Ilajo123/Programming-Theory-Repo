@@ -1,17 +1,22 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
+
 
 public class GameManager : MonoBehaviour
 {
     private float health;
     private float score;
+    [SerializeField] private TextMeshProUGUI pointsText, livesText;
     [SerializeField] private SpawnManager spawnManager;
+    [SerializeField] private GameObject gameOverPanel;
+
 
     void Start()
     {
         health = 3;
-        Debug.Log("Health: " + health);
-
+        score = 0;
+        livesText.text = $"Lives: {health}";
+        pointsText.text = $"Score: {score}";
     }
     private void OnEnable()
     {
@@ -26,22 +31,25 @@ public class GameManager : MonoBehaviour
     void OnHit(float d)
     {
         health -= d;
-        Debug.Log("Health: " + health);
+        livesText.text = $"Lives: {health}";
         if (health <= 0)
         {
-            Debug.Log("Health: " + health);
+            livesText.text = $"Lives: 0";
             GameOver();
         }
     }
 
     void GameOver()
     {
+        gameOverPanel.SetActive(true);
         Time.timeScale = 0f;
     }
     
     void OnCatch(float points)
     {
         score += points;
-        Debug.Log("Score: " +  score);
+        pointsText.text = $"Score: {score}";
     }        
+
+
 }

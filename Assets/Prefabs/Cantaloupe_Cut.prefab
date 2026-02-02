@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 108488269529988485}
   - component: {fileID: 1802675588174044611}
   - component: {fileID: 8396498524507311211}
+  - component: {fileID: -1235392914656304517}
   m_Layer: 0
   m_Name: Cantaloupe_Cut
   m_TagString: Untagged
@@ -140,3 +141,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.56268156, y: 0.5733561, z: 0.49303484}
   m_Center: {x: 0, y: 0.28667805, z: 0.0038510486}
+--- !u!114 &-1235392914656304517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4556780352052960516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67f0de18d706e444838564edff7c0a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BigFruits
